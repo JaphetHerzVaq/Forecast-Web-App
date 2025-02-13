@@ -13,4 +13,5 @@ services:
     instanceConfiguration:
       cpu: 1024  # Opción de configuración de CPU
       memory: 2048  # Opción de configuración de memoria en MB
-    startCommand: "python fcst_webapp.py"  # El comando para iniciar tu aplicación
+    startCommand: "gunicorn -b 0.0.0.0:5000 fcst_webapp:app"
+
