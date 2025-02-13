@@ -4,6 +4,9 @@ phases:
     runtime-versions:
       python: 3.11
     commands:
+      - echo Installing dependencies...
+      - curl --silent --show-error --location https://bootstrap.pypa.io/get-pip.py | python
+      - pip install --upgrade pip
       - pip install -r requirements.txt
   build:
     commands:
