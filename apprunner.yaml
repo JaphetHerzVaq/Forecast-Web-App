@@ -1,0 +1,16 @@
+version: 1.0
+
+services:
+  - name: flask-app
+    source:
+      type: GitHub
+      gitHub:
+        repository: "JaphetHerzVaq/Forecast-Web-App"  # Reemplaza con tu usuario y nombre de repositorio
+        branch: main  # El nombre de la rama de tu repositorio
+    runtime:
+      type: python
+      version: "3.11"  # Puedes especificar la versión de Python aquí
+    instanceConfiguration:
+      cpu: 1024  # Opción de configuración de CPU
+      memory: 2048  # Opción de configuración de memoria en MB
+    startCommand: "python fcst_webapp.py"  # El comando para iniciar tu aplicación
